@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class binarySearch{
     public static int Search(int[] arr,int low, int high, int target){
         while(low <high){
@@ -14,8 +16,12 @@ public class binarySearch{
 
     }
     public static void main(String[] args) {
-        int [] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int target = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the array size:");
+        int n = sc.nextInt();
+        System.out.print("Enter the target element: ");
+        int target = sc.nextInt();
+        sc.close();
         int result = Search(arr, 0, arr.length -1, target);
         System.out.println("Element found at index: " + result);
     }
